@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zed2i-camera"
+version = "0.1.0"
+description = "Standalone Stereolabs ZED 2i RGB-D acquisition package"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["numpy>=1.20"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
